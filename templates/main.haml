@@ -1,0 +1,13 @@
+<basics/head.haml>
+    %main
+      %p (no home content yet, showing posts)
+      =# each articles do article:
+      %article
+        %header
+          %h1 [[[article.title]]]
+          %date date([[[article.date]]]);
+
+        .article-content
+          %p [[[article.inner]]]
+      =# end
+<basics/footer.haml>

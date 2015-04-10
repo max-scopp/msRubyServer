@@ -1,0 +1,19 @@
+#!/usr/bin/env ruby
+require 'daemons'
+require 'logger'
+require File.dirname(__FILE__) + '/config.rb'
+
+# clears screen
+system "clear" or system "cls"
+
+if __FILE__ == $0
+  Daemons.run(__FILE__)
+else
+  # fix working directory
+  Dir.chdir(File.dirname(__FILE__))
+  # set logger (pipe represents STDOUT)
+  Log = Logger.new("| tee last.log")
+
+  require "#{SERVER}/server.rb"
+  Server.init # fires up server
+end

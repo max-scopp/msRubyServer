@@ -1,0 +1,15 @@
+
+$list: (#008148, #EF8A17, #B73024);
+$random-color: nth($list, random(length($list)));
+
+$black: #333333;
+$white: #FFFFFF;
+
+$nav-margin: 50px;
+$content-width: 450px;
+
+$break-small: 450px;
+$break-middle: 650px;
+
+// Clean this up when you decided which font you want bro!
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,100italic,100,300,300italic,500,400italic,500italic,700,700italic,900,900italic);

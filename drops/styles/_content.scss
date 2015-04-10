@@ -1,0 +1,172 @@
+
+/**
+ * Header Styling
+ * ============================================================================
+ */
+body > header { // greater-than-sign due to the article header
+  background-color: $white;
+  color: $black;
+  padding: 10px 0;
+
+  h1 {
+    text-align: center;
+    font-weight: 100;
+    font-size: 2rem;
+    font-size: 7.5vw;
+
+    @media (max-width: $break-small) {
+      font-size: 15vw;
+    }
+  }
+}
+
+/**
+ * Header-Navbar Styling
+ * ============================================================================
+ */
+nav {
+  // centers navbar
+  text-align: center;
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: $nav-margin auto;
+
+    >li {
+      display: inline-block;
+
+      @media (max-width: $break-small) {
+        display: block;
+      }
+
+      a {
+        text-decoration: none;
+        color: $black;
+        padding: 10px 20px;
+        margin: 0 10px;
+
+        border: 2px solid transparent;
+        border-bottom-width: 4px;
+
+        transition: all .15s ease;
+        transition-timing-function: cubic-bezier(0.075, 0.820, 0.165, 1.000);
+        transition-property: border-color;
+
+        @media (max-width: $break-small) {
+          display: block;
+          margin: 10px;
+        }
+
+        &:focus,
+        &:hover {
+          border-color: currentColor; // ie8 and down not supported
+        }
+      }
+    }
+  }
+}
+
+/**
+ * Basic Main-Content Style
+ * ============================================================================
+ */
+main {
+  color: mix($white, $black);
+  background-color: $black;
+
+  text-align: center;
+  font-weight: 200;
+
+  padding: 20px;
+}
+
+/**
+ * Specific Static-Content Styling
+ * ============================================================================
+ */
+div.article-like-content {
+  header {
+    background-color: $random-color;
+    border-bottom-color: darken($random-color, 5);
+  }
+}
+
+/**
+ * Article Styling
+ * ============================================================================
+ */
+article {
+  header {
+    background-color: $random-color;
+    border-color: darken($random-color, 5);
+  }
+}
+
+/**
+ * Base Styling for Articles and Article-Like-Content
+ * ============================================================================
+ */
+article,
+.article-like-content {
+  margin: 40px auto;
+  max-width: $content-width;
+
+  text-align: left;
+  font-size: 1rem;
+  font-weight: 400;
+
+  color: $black;
+  background-color: $white;
+  box-shadow: 1px 1px 10px rgba(darken($black, 50%), .4);
+
+  header {
+    position: relative;
+    padding: 20px;
+
+    border-bottom: 4px solid;
+    color: $white;
+
+    h1 {
+      margin: 0;
+    }
+  }
+
+  .article-content {
+    padding: 10px 30px;
+
+    h1 {
+      margin-bottom: 0;
+    }
+  }
+
+  .center {
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+  }
+
+  img {
+    max-width: 100%;
+  }
+}
+
+/**
+ * Global Footer Styling
+ * ============================================================================
+ */
+footer {
+  color: lighten($black, 25);
+
+  text-align: center;
+
+  padding: 20px;
+
+  h1 {
+    font-weight: 100;
+    font-size: 1rem;
+    text-transform: uppercase;
+
+    line-height: 1.5rem;
+  }
+}

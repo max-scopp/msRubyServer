@@ -1,0 +1,41 @@
+
+#
+# <site title>:
+#   match: <url to match>
+#   serve: <template file>
+#
+# All additional variables are handled as fixed-globals
+# There is no use of <site title>, yet.
+#
+
+main:
+  match: /
+  serve: main.haml
+
+  title: "Main Page"
+
+about:
+  match: /about
+  serve: about.haml
+
+  title: "About Me"
+
+posts:
+  match: /posts
+  serve: posts.haml
+
+  title: "Latest Posts"
+
+imprint:
+  match: /imprint
+  serve: imprint.haml
+
+  title: "Imprint"
+
+
+
+tests:
+  match: /tests
+  serve: dev.haml
+
+  title: "PAGE TITLE"

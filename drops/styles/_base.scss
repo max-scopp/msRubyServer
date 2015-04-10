@@ -1,0 +1,63 @@
+
+* {
+  box-sizing: border-box;
+}
+
+::selection {
+  background-color: $black;
+  color: $white;
+}
+
+html, body {
+  font-family: 'Roboto', sans-serif;
+  background-color: $black;
+  color: $white;
+
+  margin: 0;
+
+  font-size: 16px;
+
+  @media (max-width: $break-middle) {
+    font-size: 2.5vw;
+  }
+
+  @media (max-width: $break-small) {
+    font-size: 3.5vw;
+  }
+}
+
+hr {
+  border: none;
+  border-top: 1px solid mix($white, $black);
+}
+
+a[href^="#"] {
+  color: currentColor;
+}
+
+a:not([href^="#"]) {
+  color: $random-color;
+}
+
+p > span {
+  color: lighten($black, 25);
+  font-size: .75em;
+}
+
+i.love-ruby {
+  display: inline-block;
+
+  &:after {
+    content: "";
+    display: block;
+
+    background-image: url('data:image/png;base64,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');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    width: 2rem;
+    height: 2rem;
+    margin: 1rem;
+  }
+}

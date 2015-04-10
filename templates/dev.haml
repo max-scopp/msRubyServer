@@ -1,0 +1,40 @@
+!!!
+%body
+  %style
+    * {
+    font-family: sans-serif;
+    background: #333;
+    color: #FFF;
+    }
+    pre, code {
+    font-family: monospace;
+    border: 2px solid #222;
+    padding: 10px 20px;
+    }
+    hr { border: 1px solid #222; }
+
+  %h1 Dev Zone!
+  %h3 Global Title Var: [[[@title]]]
+
+  %section
+    %h3 Function execution
+    / ===========================================================================
+    %pre Unknown: undefined(method);
+    %pre Test: test();
+    %pre Print: print(Hello, wonderful, World!);
+    %pre Calc: calc(64+32);
+    %pre Calc-Weird: calc(calculate the power of a hundred (8 + 2.0) ** 2 but not the text);
+    %pre Date: date(2015-04-10 21:53:16);
+    %pre Unix-Time: date(123456789);
+
+  %section
+    %h3 Loops (must be in database!)
+    / ===========================================================================
+    =# each articles do article:
+    %pre
+      \
+      Article-ID: [[[article.id]]]
+      Article-Inner: [[[article.inner]]]
+    =# end
+
+  %h1 Make suggestion! More will come
